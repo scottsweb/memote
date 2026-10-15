@@ -4,16 +4,16 @@
 			"domain": "bbc.co.uk",
 			"name": "BBC iPlayer",
 			"url": "https://www.bbc.co.uk/iplayer",
-			"color": "#BB1919",
+			"color": "#bf3972",
 			"cssFile": "css/sites/bbc-iplayer.css",
 			"jsFile": "js/sites/bbc-iplayer.js",
-			"initialFocus": "a.hero-promo__cta-button, button.play-cta__inner"
+			"initialFocus": "a.hero-promo__cta-button, button.play-cta__inner, a.tleo-list__contextual-cta__button__play"
 		},
 		{
 			"domain": "itv.com",
 			"name": "ITVx",
 			"url": "https://www.itv.com",
-			"color": "#006BE6",
+			"color": "#00B1F1",
 			"cssFile": "css/sites/itvx.css",
 			"jsFile": false,
 			"initialFocus": "button.cp_button--primary"
@@ -31,10 +31,10 @@
 			"domain": "channel5.com",
 			"name": "Channel 5",
 			"url": "https://www.channel5.com",
-			"color": "#00A651",
+			"color": "#E74AAC",
 			"cssFile": "css/sites/channel5.css",
 			"jsFile": false,
-			"initialFocus": "nav a:first-child, .menu__item a:first-child"
+			"initialFocus": "button.Button_button__E2EFk"
 		}
 	]
 }

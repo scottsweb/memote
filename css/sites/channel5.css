@@ -1,1 +1,12 @@
-/* Channel 5 - Site-specific styles */
+/* Channel 5 */
+
+.rail-inner {
+    overflow-x: hidden;
+}
+
+.page-dots,
+.RailPager_prev__9G1RF,
+.RailPager_next__0wzYC,
+footer {
+    display: none;
+}

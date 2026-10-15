@@ -6,6 +6,6 @@
 	display: none !important;
 }
 
-.carrousel__item--inactive {
-	visibility: hidden;
+.section__content div:not(.section__header) {
+	overflow: hidden;
 }

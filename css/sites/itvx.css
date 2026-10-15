@@ -9,6 +9,15 @@ a[href='/watch/itvx-premium'] {
 	display: none;
 }
 
+.cp_navigation.header {
+	position: static !important;
+	overflow: hidden !important;
+}
+
+.header+.pageContentWrapper {
+	margin-top: 0 !important;
+}
+
 .tabbed-rail-slider,
 .cp_tile-slider {
 	margin-bottom: 2em;
@@ -19,6 +28,10 @@ a[href='/watch/itvx-premium'] {
 	left: 0;
 }
 
+.cp_tile-slider__arrow--right,
+.cp_tile-slider__arrow--left,
+.cp_tile-slider__inner--sides-right:after,
+.cp_tile-slider__inner--sides-left:after,
 .cp_tile-slider-arrow {
 	display: none !important;
 }

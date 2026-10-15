@@ -25,7 +25,7 @@
 			"color": "#FF4500",
 			"cssFile": "css/sites/channel4.css",
 			"jsFile": false,
-			"initialFocus": "button.all4-superhero-slice__hero-play, button.all4-primary-icon-button"
+			"initialFocus": "button.all4-superhero-slice__hero-play, button.all4-primary-icon-button, button.text-button.play"
 		},
 		{
 			"domain": "channel5.com",
@@ -34,7 +34,7 @@
 			"color": "#E74AAC",
 			"cssFile": "css/sites/channel5.css",
 			"jsFile": false,
-			"initialFocus": "button.Button_button__E2EFk"
+			"initialFocus": "button.Button_button__E2EFk, .video-data button:first-child"
 		}
 	]
 }

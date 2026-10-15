@@ -84,7 +84,7 @@
 			var elements = document.querySelectorAll(selector);
 			if (elements.length > 0) {
 				var target = elements[0];
-				target.focus();
+				//target.focus();
 				// Apply spatial navigation cursor styling
 				if (!target.classList.contains('spatialnavigation-cursor')) {
 					target.classList.add('spatialnavigation-cursor');

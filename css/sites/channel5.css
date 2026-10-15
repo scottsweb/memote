@@ -10,3 +10,7 @@
 footer {
     display: none;
 }
+
+.active.hero-item {
+    pointer-events: none;
+}

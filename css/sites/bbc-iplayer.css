@@ -9,3 +9,17 @@
 .section__content div:not(.section__header) {
 	overflow: hidden;
 }
+
+.carrousel__item.carrousel__item--inactive {
+	filter: opacity(1) !important;
+	display: block !important;
+	pointer-events: inherit !important;
+}
+
+.carrousel__arrows {
+	display: none !important;
+}
+
+.hero-meta::after {
+	padding-bottom: 0;
+}

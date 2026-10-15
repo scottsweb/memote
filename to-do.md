@@ -12,3 +12,6 @@ Here are some of the things we need to do:
 5. We might want specific hacks for each site. For example hitting enter on the video element of thie iPlayer doesn't focus it properly. It's easy to get stuck.
 6. When hitting play we want to make sure the video play is focused and put into full screen
 7. Zoom UI by 15%
+8. Remove unused key combos
+9. Hold esc to go home
+10. New icons

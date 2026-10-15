@@ -1,0 +1,24 @@
+/* ITVx */
+
+.premium-banner.premium-banner--visible,
+.cp_portrait-tile__footer-info,
+.cp_footer.cp_grid__wrapper,
+.sponsorship-ad-banner,
+.watchAdFree__btn,
+a[href='/watch/itvx-premium'] {
+	display: none;
+}
+
+.tabbed-rail-slider,
+.cp_tile-slider {
+	margin-bottom: 2em;
+}
+
+.cp_section-header {
+	position: sticky;
+	left: 0;
+}
+
+.cp_tile-slider-arrow {
+	display: none !important;
+}

@@ -1,0 +1,11 @@
+/* BBC iPlayer */
+
+#orb-header,
+.hero-promo--small,
+#orb-footer {
+	display: none !important;
+}
+
+.carrousel__item--inactive {
+	visibility: hidden;
+}

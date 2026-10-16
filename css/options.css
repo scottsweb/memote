@@ -32,15 +32,7 @@ h2 {
 .title {
 	padding: 15px 0 2px 0;
 	text-align: center;
-	margin-bottom: -20px;
-}
-
-.title-area {
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	max-width: 700px;
-	margin: 20px auto 2px auto;
+	margin-bottom: 20px;
 }
 
 .setting-area {

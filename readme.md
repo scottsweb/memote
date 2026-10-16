@@ -2,16 +2,11 @@
 
 **Navigate Popular Streaming Sites with a Remote Control or Keyboard**
 
-Smart spatial navigation with keyboard controls for streaming platforms.
-
-Binds WASD, arrow keys, and remote-style controls for navigation:
+Smart spatial navigation controls for streaming platforms. Binds WASD, arrow keys, and remote-style controls for navigation:
 
 - `W/A/S/D` or `Arrow Keys`: Four-way spatial navigation
-- `E/Shift+E`: Expand/Contract (change link targets)
-- `Q`: Quit navigation/hints mode
-- `Enter/F`: Click link
-- `Shift+Enter/Shift+F`: Shift-click link (open new tab)
-- `Ctrl+Enter/Ctrl+F`: Ctrl-click link (open new background tab)
+- `J/I`: Show or hide jump keys
+- `F/Enter`: Click focused link
 - `Ctrl+Shift+X`: Disable the hotkeys for current tab
 
 Set your own keys: Click the icon and choose Options, or visit the details page in the browser extension manager.
@@ -20,7 +15,7 @@ Any contributions are most welcome! 🤓👍
 
 ## Optimised Sites
 
-Currently optimised for the following streaming platforms:
+Currently optimised and enabled for the following streaming sites:
 
 - [BBC iPlayer](https://www.bbc.co.uk/iplayer)
 - [ITVX](https://www.itv.com)
@@ -46,8 +41,6 @@ Currently optimised for the following streaming platforms:
 ### Known Issues
 
 - Changing keys in options require a tab reload to take effect.
-- Using `Ctrl+<link key>` in hints mode does not work. Using `Shift+<link key>` works for opening in a new tab though.
-- The default `Ctrl+F` interferes with the common browser shortcut for Find-In-Page.
 - The extension uses a hard-coded list of link hint keys that might interfere with browser keys.
 
 ### Customization

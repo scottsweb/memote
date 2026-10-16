@@ -1,6 +1,7 @@
 /* BBC iPlayer */
 
 #orb-header,
+.carrousel__arrows,
 .hero-promo--small,
 #orb-footer {
 	display: none !important;
@@ -14,10 +15,6 @@
 	filter: opacity(1) !important;
 	display: block !important;
 	pointer-events: inherit !important;
-}
-
-.carrousel__arrows {
-	display: none !important;
 }
 
 .hero-meta::after {

@@ -2419,6 +2419,13 @@
 							HOTKEY_CODES = settingsFull.hotkeys.codes;
 							window.__MEMOTE_HOTKEY_CODES = HOTKEY_CODES;
 
+							// Migrate: remove deprecated shiftClick and controlClick from stored settings
+							if ('shiftClick' in HOTKEY_CODES || 'controlClick' in HOTKEY_CODES) {
+								delete HOTKEY_CODES.shiftClick;
+								delete HOTKEY_CODES.controlClick;
+								chrome.storage.local.set({ 'extension-settings': settingsFull });
+							}
+
 							if (callback instanceof Function) {
 								callback();
 							}
@@ -2432,7 +2439,9 @@
 					exports.getHotkeyCodes = getHotkeyCodes;
 
 					function isHotkeyPressed(hotkeyID) {
-						return HOTKEY_CODES[hotkeyID].some((combo) => {
+						var codes = HOTKEY_CODES[hotkeyID];
+						if (!codes) return false;
+						return codes.some((combo) => {
 							return setArrayMatch(KEYS_DOWN, combo);
 						});
 					}
@@ -2541,14 +2550,8 @@
 							return 5;
 						} else if (HELPER_FUNCTIONS.isHotkeyPressed('jump')) {
 							return 6;
-						} else if (HELPER_FUNCTIONS.isHotkeyPressed('quit')) {
-							return 10;
 						} else if (HELPER_FUNCTIONS.isHotkeyPressed('click')) {
 							return 8;
-						} else if (HELPER_FUNCTIONS.isHotkeyPressed('shiftClick')) {
-							return 9;
-						} else if (HELPER_FUNCTIONS.isHotkeyPressed('controlClick')) {
-							return 12;
 						} else {
 							return 11; // INVALID
 						}
@@ -3562,9 +3565,6 @@
 							if (!cursor && attribute.command === 8 /* ENTER */) {
 								return;
 							}
-							if (!cursor && attribute.command === 9 /* ENTER_S */) {
-								return;
-							}
 							event.preventDefault();
 							event.stopImmediatePropagation();
 							CONTROLLER.command(entity, attribute);
@@ -3655,20 +3655,6 @@
 											document.querySelector('.' + ATTRIBUTE.CURSOR_ID),
 											false,
 											false
-										);
-										break;
-									case 9 /* ENTER_S */:
-										trigger(
-											document.querySelector('.' + ATTRIBUTE.CURSOR_ID),
-											true,
-											false
-										);
-										break;
-									case 12 /* ENTER_C */:
-										trigger(
-											document.querySelector('.' + ATTRIBUTE.CURSOR_ID),
-											false,
-											true
 										);
 										break;
 									default:

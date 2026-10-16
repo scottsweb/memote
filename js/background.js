@@ -7,16 +7,7 @@ chrome.runtime.onInstalled.addListener(function () {
 				navDown: [['s'], ['arrowdown']],
 				navRight: [['d'], ['arrowright']],
 				jump: [['j'], ['i']],
-				quit: [['q']],
 				click: [['f'], ['enter']],
-				shiftClick: [
-					['shift', 'enter'],
-					['shift', 'f']
-				],
-				controlClick: [
-					['control', 'enter'],
-					['control', 'f']
-				],
 				disableKeys: [['control', 'shift', 'x']]
 			}
 		}

@@ -1,6 +1,13 @@
 var SETTINGS_FULL;
 var HOTKEY_CODES;
 
+function resetToDefaults() {
+	chrome.storage.local.set({ 'extension-settings': DEFAULT_SETTINGS }, function () {
+		alertMessage('success', 'All settings reset to defaults!', 2000);
+		getSettings(populateFields);
+	});
+}
+
 function getSettings(callback) {
 	chrome.storage.local.get(['extension-settings'], function (result) {
 		SETTINGS_FULL = result['extension-settings'];
@@ -222,6 +229,13 @@ function areArraysEqual(a, b) {
 	}
 	return true;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+	let resetBtn = document.querySelector('.btn.reset');
+	if (resetBtn) {
+		resetBtn.addEventListener('click', resetToDefaults);
+	}
+});
 
 getSettings(function () {
 	// once the DOM is ready file in all settings info

@@ -1,9 +1,3 @@
-// ============================================================================
-// Memote - Site Configuration Loader
-// ============================================================================
-// Loads site-specific CSS and JS based on current domain
-// ============================================================================
-
 (function () {
 	'use strict';
 
@@ -109,10 +103,7 @@
 				'--memote-cursor-bg',
 				color + '20'
 			);
-			document.documentElement.style.setProperty(
-				'--memote-marker-bg',
-				color
-			);
+			document.documentElement.style.setProperty('--memote-marker-bg', color);
 		}
 	}
 

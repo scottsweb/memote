@@ -45,11 +45,10 @@ Currently optimised and enabled for the following streaming sites:
 
 ### Customization
 
-The CSS styles for links/hints/url display can be changed in `js/content.js`:
+The CSS styles for links/hints can be changed in `js/content.js`:
 
 - Cursor styling: look for `CURSOR_ID` style definitions
 - Marker styling: look for `MAP.map` function
-- URL display styling: look for `displayUrl` function
 
 ### Future Improvements
 

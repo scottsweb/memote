@@ -11,7 +11,7 @@
 	--accent-hover: #4f46e5;
 	--danger: #ef4444;
 	--danger-hover: #dc2626;
-	--success: #22c55e;
+	--success: #005acf;
 	--font:
 		'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
 		sans-serif;
@@ -235,13 +235,13 @@ hr {
 
 /* Notification success */
 #notify.notify-success {
-	--notificationBGColor: rgba(34, 197, 94, 0.9);
+	--notificationBGColor: var(--success);
 	--notificationBorder: var(--success);
 }
 
 /* Notification error */
 #notify.notify-error {
-	--notificationBGColor: rgba(239, 68, 68, 0.9);
+	--notificationBGColor: var(--danger);
 	--notificationBorder: var(--danger);
 }
 

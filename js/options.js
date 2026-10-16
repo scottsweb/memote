@@ -80,33 +80,13 @@ function alertMessage(type, text, timeOut) {
 	let notification = document.getElementById('notify');
 	let notificationText = document.getElementById('notifyText');
 
-	// color the notification
-	let bgColor, textColor, borderColor;
-	switch (type) {
-		case 'success':
-			bgColor = 'rgb(67 255 125 / 70%)';
-			textColor = 'white';
-			borderColor = 'lime';
-			break;
-		case 'failure':
-			bgColor = 'rgb(255 70 104 / 70%)';
-			textColor = 'white';
-			borderColor = 'red';
-			break;
-		default:
-			bgColor = 'rgb(0 137 255 / 60%)';
-			textColor = 'white';
-			borderColor = 'rgb(0 137 255)';
-			break;
-	}
-	notification.style.setProperty('--notificationBGColor', bgColor);
-	notification.style.setProperty('--notificationBorder', borderColor);
-	notification.style.setProperty('--notificationTextColor', textColor);
+	notification.className = type === 'success'
+		? 'notify-success'
+		: type === 'failure'
+			? 'notify-error'
+			: '';
 
-	// Set the text
 	notificationText.innerHTML = text;
-
-	// Show the notification for the specified time
 	notification.classList.add('active');
 	setTimeout(function () {
 		notification.classList.remove('active');

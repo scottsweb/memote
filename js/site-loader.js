@@ -76,19 +76,24 @@
 		}
 		var attempts = 0;
 		var maxAttempts = 10;
+		var focusTarget = null;
 		function tryFocus() {
 			attempts++;
 			var elements = document.querySelectorAll(selector);
 			if (elements.length > 0) {
 				var target = elements[0];
-				if (!target.classList.contains('spatialnavigation-cursor')) {
+				if (focusTarget !== target) {
+					if (focusTarget) {
+						focusTarget.classList.remove('spatialnavigation-cursor');
+					}
 					target.classList.add('spatialnavigation-cursor');
+					focusTarget = target;
+					console.log(
+						'[Memote] Focus applied to:',
+						target.tagName,
+						target.textContent.trim().substring(0, 50)
+					);
 				}
-				console.log(
-					'[Memote] Initial focus applied to:',
-					target.tagName,
-					target.textContent.trim().substring(0, 50)
-				);
 				return;
 			}
 			if (attempts < maxAttempts) {
@@ -96,6 +101,23 @@
 			}
 		}
 		tryFocus();
+
+		var observer = new MutationObserver(function (mutations) {
+			for (var i = 0; i < mutations.length; i++) {
+				var removed = mutations[i].removedNodes;
+				for (var j = 0; j < removed.length; j++) {
+					if (
+						focusTarget &&
+						(removed[j] === focusTarget || removed[j].contains(focusTarget))
+					) {
+						focusTarget = null;
+						tryFocus();
+						return;
+					}
+				}
+			}
+		});
+		observer.observe(document.body, { childList: true, subtree: true });
 	}
 
 	// Update cursor highlight color using CSS custom property

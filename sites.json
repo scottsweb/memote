@@ -16,7 +16,7 @@
 			"color": "#00B1F1",
 			"cssFile": "css/sites/itvx.css",
 			"jsFile": "js/sites/itvx.js",
-			"initialFocus": "button.cp_button--primary"
+			"initialFocus": ".cp_button--primary.videoPlayer__play-btn"
 		},
 		{
 			"domain": "channel4.com",
@@ -25,7 +25,7 @@
 			"color": "#FF4500",
 			"cssFile": "css/sites/channel4.css",
 			"jsFile": "js/sites/channel4.js",
-			"initialFocus": "button.all4-superhero-slice__hero-play, button.all4-primary-icon-button, button.text-button.play"
+			"initialFocus": "button.all4-superhero-slice__hero-play, button.all4-primary-icon-button, .text-button.play"
 		},
 		{
 			"domain": "channel5.com",

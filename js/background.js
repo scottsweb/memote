@@ -3,19 +3,20 @@ chrome.runtime.onInstalled.addListener(function () {
 		if (!result['extension-settings']) {
 			chrome.storage.local.set(
 				{
-					'extension-settings': {
-						hotkeys: {
-							codes: {
-								navUp: [['w'], ['arrowup']],
-								navLeft: [['a'], ['arrowleft']],
-								navDown: [['s'], ['arrowdown']],
-								navRight: [['d'], ['arrowright']],
-								jump: [['j'], ['i']],
-								click: [['f'], ['enter']],
-								disableKeys: [['control', 'shift', 'x']]
-							}
+				'extension-settings': {
+					hotkeys: {
+						codes: {
+							home: [['escape']],
+							navUp: [['w'], ['arrowup']],
+							navLeft: [['a'], ['arrowleft']],
+							navDown: [['s'], ['arrowdown']],
+							navRight: [['d'], ['arrowright']],
+							jump: [['j'], ['i']],
+							click: [['f'], ['enter']],
+							disableKeys: [['control', 'shift', 'x']]
 						}
 					}
+				}
 				},
 				function () {
 					console.log('Initial setting set...');

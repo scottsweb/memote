@@ -1,6 +1,7 @@
 var DEFAULT_SETTINGS = {
 	hotkeys: {
 		codes: {
+			home: [['escape']],
 			navUp: [['w'], ['arrowup']],
 			navLeft: [['a'], ['arrowleft']],
 			navDown: [['s'], ['arrowdown']],

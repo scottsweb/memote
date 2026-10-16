@@ -139,9 +139,14 @@
 	window.MEMOTE_SITE = {
 		loadSiteConfig: loadSiteConfig,
 		getCurrentSiteConfig: getCurrentSiteConfig,
-		applySiteConfig: applySiteConfig
+		applySiteConfig: applySiteConfig,
+		getHomeUrl: function () {
+			var site = getCurrentSiteConfig();
+			return site && site.url ? site.url : null;
+		}
 	};
 
 	// Initialize on load
 	loadSiteConfig();
 })();
+

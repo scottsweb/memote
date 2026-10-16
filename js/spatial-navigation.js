@@ -45,6 +45,7 @@
 					var KEYS_DOWN = new Set();
 					var HOTKEY_CODES = {};
 					var DEFAULT_HOTKEY_CODES = {
+						home: [['escape']],
 						navUp: [['w'], ['arrowup']],
 						navLeft: [['a'], ['arrowleft']],
 						navDown: [['s'], ['arrowdown']],
@@ -222,6 +223,41 @@
 						return result;
 					}
 					exports.key2command = key2command;
+
+					// Hold configured shortcut to go home
+					var homeTimer = null;
+					var homeKeyMap = {};
+
+					function initHomeHandler() {
+						var settingsLoaded = setInterval(function () {
+							if (window.__MEMOTE_HOTKEY_CODES) {
+								homeKeyMap = window.__MEMOTE_HOTKEY_CODES;
+								clearInterval(settingsLoaded);
+							}
+						}, 50);
+						document.addEventListener('keydown', handleHomeKeydown);
+						document.addEventListener('keyup', handleHomeKeyUp);
+					}
+
+					function handleHomeKeydown(e) {
+						var homeUrl = window.MEMOTE_SITE.getHomeUrl();
+						if (!homeUrl || !homeKeyMap.home) return;
+						var isHomePressed = HELPER_FUNCTIONS.isHotkeyPressed('home');
+						if (isHomePressed && !homeTimer) {
+							homeTimer = setTimeout(function () {
+								window.location.href = homeUrl;
+							}, 1000);
+						}
+					}
+
+					function handleHomeKeyUp(e) {
+						if (homeTimer) {
+							clearTimeout(homeTimer);
+							homeTimer = null;
+						}
+					}
+
+					initHomeHandler();
 				},
 				{ helperFunctions: 13 }
 			],

@@ -15,7 +15,7 @@
 			"url": "https://www.itv.com",
 			"color": "#00B1F1",
 			"cssFile": "css/sites/itvx.css",
-			"jsFile": false,
+			"jsFile": "js/sites/itvx.js",
 			"initialFocus": "button.cp_button--primary"
 		},
 		{
@@ -24,7 +24,7 @@
 			"url": "https://www.channel4.com",
 			"color": "#FF4500",
 			"cssFile": "css/sites/channel4.css",
-			"jsFile": false,
+			"jsFile": "js/sites/channel4.js",
 			"initialFocus": "button.all4-superhero-slice__hero-play, button.all4-primary-icon-button, button.text-button.play"
 		},
 		{
@@ -33,8 +33,8 @@
 			"url": "https://www.channel5.com",
 			"color": "#E74AAC",
 			"cssFile": "css/sites/channel5.css",
-			"jsFile": false,
-			"initialFocus": "button.Button_button__E2EFk, .video-data button:first-child"
+			"jsFile": "js/sites/channel5.js",
+			"initialFocus": "button[class*='primary'][class*='PlayerView'], .video-data button:first-child"
 		}
 	]
 }

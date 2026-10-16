@@ -1,42 +1,23 @@
-// ============================================================================
-// BBC iPlayer - Site-specific hacks
-// ============================================================================
-// Handles iPlayer-specific navigation issues
-
 (function () {
 	'use strict';
 
-	// iPlayer video player doesn't focus properly with Enter
-	// This hack ensures the video controls are focusable
-	function init() {
-		console.log('[Memote/iPlayer] Initializing site hacks');
-
-		// Watch for video elements and add tabindex if needed
-		var observer = new MutationObserver(function (mutations) {
-			mutations.forEach(function (mutation) {
-				mutation.addedNodes.forEach(function (node) {
-					if (node.nodeType === 1) {
-						var videos = node.querySelectorAll ? node.querySelectorAll('video') : [];
-						videos.forEach(function (video) {
-							if (!video.hasAttribute('tabindex')) {
-								video.setAttribute('tabindex', '0');
-							}
-						});
-					}
-				});
-			});
-		});
-
-		observer.observe(document.body, {
-			childList: true,
-			subtree: true
-		});
+	function enterFullscreen(el) {
+		try {
+			if (el.requestFullscreen) el.requestFullscreen();
+			else if (el.parentElement && el.parentElement.requestFullscreen) el.parentElement.requestFullscreen();
+		} catch (e) {}
 	}
 
-	// Run when DOM is ready
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', init);
-	} else {
-		init();
+	function waitForFullscreen() {
+		var n = 0;
+		(function check() {
+			var el = document.querySelector('smp-toucan-player');
+			if (el && el.parentElement) { enterFullscreen(el); return; }
+			if (++n < 60) setTimeout(check, 200);
+		})();
 	}
+
+	document.addEventListener('click', function (e) {
+		if (e.target.closest('button.play-cta__inner')) setTimeout(waitForFullscreen, 500);
+	});
 })();

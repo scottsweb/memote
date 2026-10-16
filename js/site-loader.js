@@ -74,12 +74,13 @@
 		if (!selector) {
 			return;
 		}
-		setTimeout(function () {
+		var attempts = 0;
+		var maxAttempts = 10;
+		function tryFocus() {
+			attempts++;
 			var elements = document.querySelectorAll(selector);
 			if (elements.length > 0) {
 				var target = elements[0];
-				//target.focus();
-				// Apply spatial navigation cursor styling
 				if (!target.classList.contains('spatialnavigation-cursor')) {
 					target.classList.add('spatialnavigation-cursor');
 				}
@@ -88,8 +89,13 @@
 					target.tagName,
 					target.textContent.trim().substring(0, 50)
 				);
+				return;
 			}
-		}, 1000);
+			if (attempts < maxAttempts) {
+				setTimeout(tryFocus, 500);
+			}
+		}
+		tryFocus();
 	}
 
 	// Update cursor highlight color using CSS custom property

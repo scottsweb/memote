@@ -2,10 +2,13 @@ var SETTINGS_FULL;
 var HOTKEY_CODES;
 
 function resetToDefaults() {
-	chrome.storage.local.set({ 'extension-settings': DEFAULT_SETTINGS }, function () {
-		alertMessage('success', 'All settings reset to defaults!', 2000);
-		getSettings(populateFields);
-	});
+	chrome.storage.local.set(
+		{ 'extension-settings': DEFAULT_SETTINGS },
+		function () {
+			alertMessage('success', 'All settings reset to defaults!', 2000);
+			getSettings(populateFields);
+		}
+	);
 }
 
 function getSettings(callback) {
@@ -171,7 +174,7 @@ function setHotkeyBtn(btnParent) {
 	createNewBtn.setAttribute('class', 'btn btn-hov addHotkey');
 	createNewBtn.innerHTML = `
        <span class="btn-text">
-           Click to type a new shortcut
+           Click to add new shortcut
        </span>
    `;
 	// Add listner for new hotkey input

@@ -4,6 +4,8 @@
 .cp_portrait-tile__footer-info,
 .cp_footer.cp_grid__wrapper,
 .sponsorship-ad-banner,
+.cp_pill-hero-slider-browser__arrow--left,
+.cp_pill-hero-slider-browser__arrow--right,
 .watchAdFree__btn,
 a[href='/watch/itvx-premium'] {
 	display: none;
@@ -14,7 +16,7 @@ a[href='/watch/itvx-premium'] {
 	overflow: hidden !important;
 }
 
-.header+.pageContentWrapper {
+.header + .pageContentWrapper {
 	margin-top: 0 !important;
 }
 
@@ -34,4 +36,8 @@ a[href='/watch/itvx-premium'] {
 .cp_tile-slider__inner--sides-left:after,
 .cp_tile-slider-arrow {
 	display: none !important;
+}
+
+.cp_pill-hero-slider-browser__container__wrapper-item:not(.active) {
+	pointer-events: none !important;
 }

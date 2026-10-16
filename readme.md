@@ -7,11 +7,16 @@ Smart spatial navigation controls for streaming platforms. Binds WASD, arrow key
 - `W/A/S/D` or `Arrow Keys`: Four-way spatial navigation
 - `J/I`: Show or hide jump keys
 - `F/Enter`: Click focused link
+- `ESC`: Hold to go home
 - `Ctrl+Shift+X`: Disable the hotkeys for current tab
 
-Set your own keys: Click the icon and choose Options, or visit the details page in the browser extension manager.
+You can also set your own keys: Click the extension icon and choose `Options`, or visit the details page in the browser extension manager.
 
-Any contributions are most welcome! 🤓👍
+If you are using a device like a Steam Machine, add your preferred browser as a non Steam game and adjust the launch options to start the browser in kiosk mode (e.g. `run org.chromium.Chromium --kiosk --force-device-scale-factor=1.25 https://example.com`). You can also set flags like the scale factor to make for a more relaxing interface.
+
+Contributions for more sites are most welcome! 🤓
+
+Forked from [Spatialnavigation](https://github.com/Pathduck/spatialnavigation) and [spatial-navigation](https://github.com/falsandtru/spatial-navigation)
 
 ## Optimised Sites
 
@@ -43,20 +48,7 @@ Currently optimised and enabled for the following streaming sites:
 - Changing keys in options require a tab reload to take effect.
 - The extension uses a hard-coded list of link hint keys that might interfere with browser keys.
 
-### Customization
-
-The CSS styles for links/hints can be changed in `js/content.js`:
-
-- Cursor styling: look for `CURSOR_ID` style definitions
-- Marker styling: look for `MAP.map` function
-
 ### Future Improvements
 
-- Site-specific CSS overrides for better UI integration
-- Site-specific navigation hacks (e.g., iPlayer video element focus issues)
-- Firefox extension support
 - More streaming sites
-
-### No Language Options
-
-There are no language options or internationalization yet.
+- Translations

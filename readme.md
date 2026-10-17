@@ -50,5 +50,5 @@ Currently optimised and enabled for the following streaming sites:
 
 ### Future Improvements
 
-- More streaming sites
+- More streaming sites (SVT, U, Netflix etc)
 - Translations

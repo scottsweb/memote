@@ -39,6 +39,6 @@
 		}
 	],
 	"short_name": "memote",
-	"version": "0.7.0",
+	"version": "1.0.0",
 	"options_page": "options.html"
 }

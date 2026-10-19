@@ -44,6 +44,15 @@
 			"cssFile": false,
 			"jsFile": "js/sites/svtplay.js",
 			"initialFocus": "a[data-rt='top-area-play-button']"
+		},
+		{
+			"domain": "tv4play.se",
+			"name": "TV4 Play",
+			"url": "https://www.tv4play.se",
+			"color": "#E30D1E",
+			"cssFile": "css/sites/tv4play.css",
+			"jsFile": "js/sites/tv4play.js",
+			"initialFocus": "a[class*='hero-cta-button']"
 		}
 	]
 }

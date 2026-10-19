@@ -1,0 +1,11 @@
+/* TV4 Play */
+
+html,
+body,
+#__next {
+	overflow-x: hidden !important;
+}
+
+footer {
+	display: none;
+}

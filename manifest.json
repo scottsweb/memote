@@ -14,7 +14,9 @@
 				"https://*.channel5.com/*",
 				"https://www.channel5.com/*",
 				"https://*.svtplay.se/*",
-				"https://www.svtplay.se/*"
+				"https://www.svtplay.se/*",
+				"https://*.tv4play.se/*",
+				"https://www.tv4play.se/*"
 			],
 			"css": ["css/memote-default.css"],
 			"run_at": "document_end"

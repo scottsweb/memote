@@ -28,10 +28,6 @@ Currently optimised and enabled for the following streaming sites:
 - [Channel 5](https://www.channel5.com)
 - [SVT Play](https://www.svtplay.se)
 
-## Screenshot
-
-![Screenshot of extension in use](img/screenshot.jpg 'Screenshot of extension in use')
-
 ## Installation
 
 ### Developer Mode (Manual)

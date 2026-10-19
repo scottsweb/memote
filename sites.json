@@ -35,6 +35,15 @@
 			"cssFile": "css/sites/channel5.css",
 			"jsFile": "js/sites/channel5.js",
 			"initialFocus": "button[class*='primary'][class*='PlayerView'], .video-data button:first-child"
+		},
+		{
+			"domain": "svtplay.se",
+			"name": "SVT Play",
+			"url": "https://www.svtplay.se",
+			"color": "#009C00",
+			"cssFile": false,
+			"jsFile": "js/sites/svtplay.js",
+			"initialFocus": "a[data-rt='top-area-play-button']"
 		}
 	]
 }

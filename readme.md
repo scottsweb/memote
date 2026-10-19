@@ -26,6 +26,7 @@ Currently optimised and enabled for the following streaming sites:
 - [ITVX](https://www.itv.com)
 - [Channel 4](https://www.channel4.com)
 - [Channel 5](https://www.channel5.com)
+- [SVT Play](https://www.svtplay.se)
 
 ## Screenshot
 
@@ -50,5 +51,5 @@ Currently optimised and enabled for the following streaming sites:
 
 ### Future Improvements
 
-- More streaming sites (SVT, U, Netflix etc)
+- More streaming sites (U, Netflix etc)
 - Translations

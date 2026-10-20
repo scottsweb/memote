@@ -43,7 +43,7 @@
 			"color": "#009C00",
 			"cssFile": "css/sites/svtplay.css",
 			"jsFile": "js/sites/svtplay.js",
-			"initialFocus": "a[data-rt='top-area-play-button']"
+			"initialFocus": "a[data-rt='top-area-play-button'], button[data-rt='video-player-kids-warning-play']"
 		}
 	]
 }

@@ -33,7 +33,6 @@ Currently optimised and enabled for the following streaming sites:
 ### Developer Mode (Manual)
 
 - Clone this repo, or download and unpack it to your file system.
-- Install dependencies: `npm install`
 - Open your browser's _Manage Extensions_ page.
 - Enable Developer Mode.
 - Click 'Load Unpacked'.

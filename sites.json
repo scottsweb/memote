@@ -41,7 +41,7 @@
 			"name": "SVT Play",
 			"url": "https://www.svtplay.se",
 			"color": "#009C00",
-			"cssFile": false,
+			"cssFile": "css/sites/svtplay.css",
 			"jsFile": "js/sites/svtplay.js",
 			"initialFocus": "a[data-rt='top-area-play-button']"
 		}

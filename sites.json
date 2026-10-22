@@ -44,6 +44,15 @@
 			"cssFile": "css/sites/svtplay.css",
 			"jsFile": "js/sites/svtplay.js",
 			"initialFocus": "a[data-rt='top-area-play-button'], button[data-rt='video-player-kids-warning-play']"
+		},
+		{
+			"domain": "tv.apple.com",
+			"name": "Apple TV",
+			"url": "https://tv.apple.com",
+			"color": "#1283FF",
+			"cssFile": "css/sites/apple-tv.css",
+			"jsFile": false,
+			"initialFocus": "button.theme-primary"
 		}
 	]
 }

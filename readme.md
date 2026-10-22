@@ -27,6 +27,7 @@ Currently optimised and enabled for the following streaming sites:
 - [Channel 4](https://www.channel4.com)
 - [Channel 5](https://www.channel5.com)
 - [SVT Play](https://www.svtplay.se)
+- [Apple TV](https://tv.apple.com)
 
 ## Installation
 

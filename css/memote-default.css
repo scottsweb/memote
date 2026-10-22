@@ -19,7 +19,11 @@ a:focus {
 	padding: 1px 3px !important;
 	border-radius: 3px !important;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
-	background-color: color-mix(in srgb, var(--memote-marker-bg) 75%, black) !important;
+	background-color: color-mix(
+		in srgb,
+		var(--memote-marker-bg) 75%,
+		black
+	) !important;
 	font-family: Helvetica, Arial, sans-serif !important;
 	text-transform: uppercase !important;
 	font-size: 13px !important;
@@ -33,6 +37,7 @@ a:focus {
 	outline-offset: -3px !important;
 	opacity: unset !important;
 	position: relative;
+	border-radius: inherit;
 
 	&:focus {
 		outline: 3px solid var(--memote-cursor-color) !important;
@@ -51,5 +56,6 @@ a:focus {
 		z-index: 10 !important;
 		content: ' ' !important;
 		border: none !important;
+		border-radius: inherit;
 	}
 }

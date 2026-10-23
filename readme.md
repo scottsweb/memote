@@ -2,7 +2,7 @@
 
 **Navigate Popular Streaming Sites with a Remote Control or Keyboard**
 
-Smart spatial navigation controls for streaming platforms. Binds WASD, arrow keys, and remote-style controls for navigation:
+Memote is a browser extension that brings spatial navigation controls to popular streaming platforms. By default it binds WASD, arrow keys, and enter / ESC controls:
 
 - `W/A/S/D` or `Arrow Keys`: Four-way spatial navigation
 - `J/I`: Show or hide jump keys
@@ -10,7 +10,7 @@ Smart spatial navigation controls for streaming platforms. Binds WASD, arrow key
 - `ESC`: Hold to go home
 - `Ctrl+Shift+X`: Disable the hotkeys for current tab
 
-You can also set your own keys: Click the extension icon and choose `Options`, or visit the details page in the browser extension manager.
+You can also configure your own keys. Click the extension icon and choose `Options`, or visit the details page in the browser extension manager.
 
 If you are using a device like a Steam Machine, add your preferred browser as a non Steam game and adjust the launch options to start the browser in kiosk mode (e.g. `run org.chromium.Chromium --kiosk --force-device-scale-factor=1.25 https://example.com`). You can also set flags like the scale factor to make for a more relaxing interface.
 
